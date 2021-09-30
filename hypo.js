@@ -10,8 +10,11 @@ function calculateSumOfSquares(a,b){
 }
 
 function calculateHypotenuse(){
-  const sumOfSquares =  calculateSumOfSquares(sides[0].value, sides[1].value);
-  const hypo =(Math.sqrt(sumOfSquares));
-  output.innerHTML = "Hypotenuse is: " + hypo.toFixed(2);
-  
+  if (sides[0].value < 0 || sides[1].value) {
+    alert("Side cannot be negative")
+  } else {
+    const sumOfSquares =  calculateSumOfSquares(sides[0].value, sides[1].value);
+    const hypo =(Math.sqrt(sumOfSquares));
+    output.innerHTML = "Hypotenuse is: " + hypo.toFixed(2);
+  }
 }

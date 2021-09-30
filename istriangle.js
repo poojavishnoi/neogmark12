@@ -13,12 +13,15 @@ function isTraingle(){
 
   const sum = angleOne + angleTwo + angleThree;
   console.log(sum);
-
-  if (sum == 180) {
-    output.innerHTML = "Great!It's a Triangle";    
+  if (angleOne < 0 || angleTwo < 0 || angleThree < 0) {
+    alert("Angles cannot be negative.");
   } else {
-    output.innerHTML = "It's not a Triangle";
-    
+    if (sum == 180) {
+      output.innerHTML = "Great!It's a Triangle";    
+    } else {
+      output.innerHTML = "It's not a Triangle";
+      
+    }
   }
 
 }

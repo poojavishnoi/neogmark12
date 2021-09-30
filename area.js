@@ -11,7 +11,12 @@ function calculateAns(a,b){
 }
 
 function calculateArea(){
-  const area = calculateAns(inputs[0].value, inputs[1].value);
-  outputEl.innerHTML = "Area is: " + area.toFixed(2);
+  if (inputs[0].value < 0 || inputs[1].value < 0) {
+    alert("Length cannot be negative.")
+  } else {
+      
+    const area = calculateAns(inputs[0].value, inputs[1].value);
+    outputEl.innerHTML = "Area is: " + area.toFixed(2);
   
+  }
 }
